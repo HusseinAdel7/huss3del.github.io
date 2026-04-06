@@ -173,6 +173,9 @@
   position: relative;
   z-index: 4;
   padding-left: 0.7rem;
+  min-height: calc(100vh - 12rem);
+  display: flex;
+  flex-direction: column;
 }
 
 .modern-hero__visual {
@@ -229,8 +232,11 @@
 
 .modern-chip {
   display: inline-block;
+  align-self: flex-start;
   margin: 0 0 0.8rem;
   padding: 0.3rem 0.7rem;
+  width: fit-content;
+  max-width: max-content;
   border-radius: 999px;
   color: #c7f9ff;
   background: rgba(33, 174, 255, 0.22);
@@ -298,6 +304,14 @@
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-bottom: 0;
+  justify-content: flex-start;
+}
+
+.modern-hero__bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 0.72rem;
+  justify-items: start;
 }
 
 .modern-stats {
@@ -371,6 +385,10 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.modern-cards--2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .modern-card,
 .project-card,
 .modern-cta {
@@ -382,6 +400,164 @@
 
 .modern-card {
   padding: 1rem;
+}
+
+.modern-card ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: rgba(227, 236, 255, 0.83);
+}
+
+.modern-card li {
+  margin: 0.35rem 0;
+}
+
+.profile-card p {
+  margin: 0;
+  color: rgba(227, 236, 255, 0.9);
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+.modern-section--experience {
+  position: relative;
+}
+
+.experience-steps {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.experience-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.experience-step::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 56px;
+  bottom: -0.9rem;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(90, 168, 255, 0.55), rgba(90, 168, 255, 0));
+}
+
+.experience-step:last-child::before {
+  display: none;
+}
+
+.experience-step__badge {
+  height: 56px;
+  width: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  border: 1px solid rgba(157, 194, 255, 0.18);
+  background:
+    radial-gradient(circle at 30% 25%, rgba(90, 168, 255, 0.45), rgba(90, 168, 255, 0.08) 60%),
+    rgba(255, 255, 255, 0.02);
+  color: #eaf4ff;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 22px rgba(9, 20, 48, 0.35);
+}
+
+.experience-step__card {
+  border-radius: 1rem;
+  border: 1px solid rgba(157, 194, 255, 0.18);
+  background: var(--panel-bg);
+  padding: 1rem 1rem 0.95rem;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.experience-step:hover .experience-step__card {
+  transform: translateY(-4px);
+  border-color: rgba(85, 172, 255, 0.46);
+  box-shadow: 0 14px 28px rgba(7, 17, 40, 0.34);
+}
+
+.experience-step__head h3 {
+  margin: 0 0 0.3rem;
+}
+
+.experience-step__org {
+  margin: 0;
+  color: rgba(210, 220, 240, 0.85);
+  font-weight: 600;
+}
+
+.experience-step__meta {
+  margin: 0.3rem 0 0;
+  color: rgba(173, 205, 255, 0.82);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.experience-step__list {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  color: rgba(227, 236, 255, 0.83);
+}
+
+.experience-step__list li {
+  margin: 0.35rem 0;
+}
+
+.skill-groups {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.skill-line {
+  margin: 0;
+  color: rgba(227, 236, 255, 0.83);
+  line-height: 1.72;
+}
+
+.language-pills {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.language-pills span {
+  border: 1px solid rgba(157, 194, 255, 0.26);
+  border-radius: 999px;
+  padding: 0.36rem 0.72rem;
+  background: rgba(255, 255, 255, 0.03);
+  color: #e8f1ff;
+  font-weight: 600;
+}
+
+@media (min-width: 860px) {
+  .experience-steps {
+    gap: 1rem;
+  }
+
+  .experience-step {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .experience-step__badge {
+    height: 64px;
+    width: 64px;
+    border-radius: 1.05rem;
+  }
+
+  .experience-step::before {
+    left: 32px;
+    top: 64px;
+  }
 }
 
 .modern-card:hover,
@@ -630,6 +806,7 @@
     z-index: 8;
     /* Keep text/cards above portrait but closer to it */
     padding-bottom: clamp(70px, 16vw, 120px);
+    min-height: auto;
   }
 
   .modern-hero__grid {
@@ -668,6 +845,10 @@
   .modern-stats {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+
+  .modern-hero__bottom {
+    margin-top: 0.85rem;
   }
 
   .hero-appbar {
