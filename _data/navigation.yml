@@ -1,18 +1,18 @@
 # main links
 main:
    
-   - title: "Full Stack Projects"
-     url: /categories/#Full_Stack_Projects
-   - title: "Back End Projects"
-     url: /categories/#Back_End_Projects
-   - title: "Front End Projects"
-     url: /categories/#Front_End_Projects
-   - title: "Desktop Applications"
-     url: /categories/#Desktop_Applications
-   - title: ".Net Articles"
-     url: /categories/#DotNet_Articles
-   - title: "Various Projects"
-     url: /categories/#Various_Projects
+   - title: "Full Stack"
+     url: /categories/#full-stack-projects
+   - title: "Backend"
+     url: /categories/#back-end-projects
+   - title: "Frontend"
+     url: /categories/#front-end-projects
+   - title: "Desktop Apps"
+     url: /categories/#desktop-applications
+   - title: ".NET Articles"
+     url: /categories/#dotnet-articles
+   - title: "Other Work"
+     url: /categories/#various-projects
 
   # - title: "Sample Posts"
   #   url: /year-archive/

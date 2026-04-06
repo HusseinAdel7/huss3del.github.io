@@ -1,5 +1,123 @@
 ---
 layout: home
-author_profile: true
+author_profile: false
 ---
-<!-- Google tag (gtag.js) -->
+<section class="modern-hero" id="top">
+  <div class="modern-hero__bg"></div>
+  <header class="hero-appbar">
+    <a class="hero-appbar__brand" href="{{ '/' | relative_url }}">Hussein A.</a>
+    <nav class="hero-appbar__nav" aria-label="Hero quick navigation">
+      <a href="#top">Home</a>
+      <a href="#featured-projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <a class="hero-appbar__cta" href="#contact">Contact</a>
+  </header>
+  <div class="modern-hero__grid">
+    <div class="modern-hero__content">
+      <p class="modern-chip">Open To Work</p>
+      <h1>Building modern, secure, and impactful software experiences.</h1>
+      <p class="modern-hero__lead">
+        Full Stack .NET Developer and Malware Analyst focused on high quality products,
+        clean architecture, and practical security.
+      </p>
+      <div class="modern-hero__actions">
+        <a class="btn btn--primary" href="#featured-projects">Explore Projects</a>
+        <a class="btn btn--info" href="mailto:husseinadelhhh@gmail.com">Hire Me</a>
+      </div>
+      <div class="modern-stats">
+        <article>
+          <span>{{ site.posts | size }}+</span>
+          <small>Published Projects</small>
+        </article>
+        <article>
+          <span>Full Stack</span>
+          <small>Frontend + Backend + APIs</small>
+        </article>
+        <article>
+          <span>Security</span>
+          <small>Malware Analysis & Secure Coding</small>
+        </article>
+      </div>
+    </div>
+    <div class="modern-hero__visual">
+      <img
+        src="{{ '/assets/images/site_data/Sinoooo.png' | relative_url }}"
+        alt="Portrait of Hussein Adel"
+        class="modern-hero__portrait"
+      >
+    </div>
+  </div>
+</section>
+
+<section class="modern-section modern-section--skills" id="skills">
+  <div class="section-title">
+    <h2>Core Expertise</h2>
+    <p>Professional strengths delivered with a product-first mindset.</p>
+  </div>
+  <div class="modern-cards modern-cards--3">
+    <article class="modern-card reveal-on-scroll">
+      <h3>Full Stack Development</h3>
+      <p>ASP.NET Core, MVC, RESTful APIs, and database-driven systems with clean architecture.</p>
+    </article>
+    <article class="modern-card reveal-on-scroll">
+      <h3>Frontend Experience</h3>
+      <p>Modern interfaces with responsive layout, smooth UX, and practical interaction design.</p>
+    </article>
+    <article class="modern-card reveal-on-scroll">
+      <h3>Security Engineering</h3>
+      <p>Malware analysis, secure coding practices, and threat-aware software implementation.</p>
+    </article>
+  </div>
+</section>
+
+<section class="modern-section" id="featured-projects">
+  <div class="section-title section-title--between">
+    <div>
+      <h2>Featured Work</h2>
+      <p>Selected projects with real technical depth and practical outcomes.</p>
+    </div>
+    <div class="project-filters" aria-label="Project filters">
+      <button class="project-filter is-active" data-filter="all" type="button">All</button>
+      <button class="project-filter" data-filter="Full Stack Projects" type="button">Full Stack</button>
+      <button class="project-filter" data-filter="Back End Projects" type="button">Backend</button>
+      <button class="project-filter" data-filter="Desktop Applications" type="button">Desktop</button>
+    </div>
+  </div>
+
+  <div class="project-grid" id="project-grid">
+    {% for post in site.posts limit: 9 %}
+      {% assign primary_category = post.categories | first | default: "Various Projects" %}
+      <article class="project-card reveal-on-scroll" data-category="{{ primary_category }}">
+        <div class="project-card__meta">
+          <span>{{ primary_category }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+        </div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+        <a class="project-card__link" href="{{ post.url | relative_url }}">Read Case Study</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="modern-section modern-cta reveal-on-scroll" id="contact">
+  <div>
+    <h2>Let’s build something exceptional.</h2>
+    <p>
+      Available for full-time opportunities and freelance projects in .NET,
+      backend systems, and secure software development.
+    </p>
+  </div>
+  <div class="modern-hero__actions">
+    <details class="contact-menu">
+      <summary class="btn btn--success">Contact Me</summary>
+      <div class="contact-menu__panel" role="menu" aria-label="Contact options">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=husseinadelhhhh@gmail.com" target="_blank" rel="noopener noreferrer" role="menuitem">Email</a>
+        <a href="https://wa.me/201098018628?text=Hi%20Hussein%2C%20I%20want%20to%20connect%20with%20you." target="_blank" rel="noopener noreferrer" role="menuitem">WhatsApp Message</a>
+        <a href="tel:+201098018628" role="menuitem">Call</a>
+      </div>
+    </details>
+    <a class="btn btn--inverse" href="https://github.com/HusseinAdel7" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+</section>

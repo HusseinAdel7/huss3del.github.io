@@ -103,8 +103,8 @@ analytics:
 # Site Author
 author:
   name             : "Hussein Adel"
-  avatar           : /assets/images/site_data/d.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Full Stack .Net Developer<be><br>---------------  And  ----------------<be><br>Malware Analyst"
+  avatar           : /assets/images/site_data/Sinoooo.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Full Stack .NET Developer<br>Security-Focused Software Engineer"
   location         : "Hellwan - Cairo - Egypt"
   email            :
   links:
@@ -292,4 +292,4 @@ defaults:
       share: false
       related: false
 
-theme: jekyll-theme-cayman
+# theme: jekyll-theme-cayman

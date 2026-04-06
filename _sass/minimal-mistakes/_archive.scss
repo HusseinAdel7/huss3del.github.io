@@ -13,20 +13,24 @@ $post_color_grey_dark: #a2a2a2;
 $post_border_radius: 8px;
 
 .post-blog-card:hover {
-  box-shadow: 0 0.5em 0.5em -0.4em rgba(255,255,255,0.8);
-  transform: translateY(-0.25em);
+  box-shadow: 0 16px 34px rgba(4, 12, 32, 0.34);
+  transform: translateY(-3px);
 }
 .post-blog-card {
   min-height: 250px;
-  background: transparent;
+  width: min(980px, calc(100% - 2rem));
+  border: 1px solid rgba(166, 194, 255, 0.18);
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
-  transition: 0.3s;
-  margin-bottom: 1.6%;
-  line-height: 1.4;
+  margin: 1rem auto 1.1rem;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  line-height: 1.45;
   font-family: sans-serif;
   z-index: 0;
+  backdrop-filter: blur(4px);
   a {
     color: inherit;
     &:hover {
@@ -36,23 +40,27 @@ $post_border_radius: 8px;
   .post-meta {
     position: relative;
     z-index: 0;
-    height: 200px;
+    height: 210px;
   }
   .post-description {
-    border-radius: 0 0 $post_border_radius $post_border_radius;
-    padding: 1rem;
+    border-radius: 0;
+    padding: 1rem 1.15rem 0.95rem;
     background: $post_color_white;
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h1,
     h2 {
       color: #444444;
       font-family: Poppins, sans-serif;
     }
     h1 {
-      line-height: 1;
+      line-height: 1.2;
       margin: 0;
-      font-size: 1.2rem;
+      font-size: clamp(1.2rem, 2vw, 1.75rem);
+      letter-spacing: -0.01em;
     }
     h2 {
       font-size: 1rem;
@@ -61,23 +69,20 @@ $post_border_radius: 8px;
       color: $post_color_grey_dark;
       margin-top: 5px;
     }
-    .post-time {
-      float: right;
-    }
   }
   p {
     position: relative;
-    margin: 1rem 0 0;
-    font-size: 0.8rem;
+    margin: 0.85rem 0 0;
+    font-size: 0.88rem;
     &:first-of-type {
-      margin-top: 1.25rem;
+      margin-top: 0.9rem;
       &:before {
         content: "";
         position: absolute;
-        height: 5px;
+        height: 4px;
         background: var(--ribbon);
-        width: 35px;
-        top: -0.75rem;
+        width: 30px;
+        top: -0.55rem;
         border-radius: 3px;
       }
     }
@@ -88,17 +93,23 @@ $post_border_radius: 8px;
   }
 
   .post-date {
-    float: left;
+    float: none;
+    display: inline-flex;
+    align-items: center;
     color: #9a9a9a;
+    margin-right: 1rem;
   }
 
   .post-time {
-    float: right;
+    float: none;
+    display: inline-flex;
+    align-items: center;
     color: #9a9a9a;
+    margin-top: 0.85rem;
   }
 
   .post-ribbon {
-    border-radius: $post_border_radius $post_border_radius 0 0;
+    border-radius: 0;
     background: var(--image-url);
     position: absolute;
     top: 0;
@@ -107,22 +118,34 @@ $post_border_radius: 8px;
     left: 0;
     background-size: cover;
     background-position: center;
-    transition: transform .2s;
+    transition: transform .3s ease;
+  }
+
+  &:hover .post-ribbon {
+    transform: scale(1.035);
   }
 
   .post-ribbon4 {
-    font-family: 'Carter One';
-    font-size: 1.3rem;
+    font-family: Poppins, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    max-width: calc(100% - 22px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: white;
     position: absolute;
-    top: 17px;
-    padding: 8px 10px;
+    top: 14px;
+    left: 0;
+    padding: 7px 10px;
     background: var(--ribbon);
-    box-shadow: -1px 2px 3px rgba(0,0,0,.3);
-    border-radius: 0 $post_border_radius $post_border_radius 0;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+    border-radius: 0 10px 10px 0;
   }
   .post-ribbon4:before, .post-ribbon4:after {
-    content: "";
+    content: none;
     position: absolute;
   }
   .post-ribbon4:before {
@@ -145,38 +168,40 @@ $post_border_radius: 8px;
 
   @media (min-width: 640px) {
     flex-direction: row;
-    max-width: 700px;
+    max-width: min(980px, calc(100% - 2rem));
     .post-meta {
-      flex-basis: 40%;
+      flex-basis: 42%;
       height: auto;
+      min-height: 230px;
     }
     .post-description {
-      border-radius: 0px $post_border_radius $post_border_radius 0;
-      flex-basis: 60%;
+      border-radius: 0;
+      flex-basis: 58%;
       &:before {
-        transform: skewX(-3deg);
-        content: "";
-        background: #fff;
-        width: 30px;
-        position: absolute;
-        left: -10px;
-        top: 0;
-        bottom: 0;
-        z-index: -1;
+        content: none;
       }
     }
     .post-ribbon {
-      border-radius: $post_border_radius 0px 0px $post_border_radius;
+      border-radius: 0;
     }
     .post-ribbon4 {
-      /*width: 100%;*/
-      font-size: 1rem;
+      font-size: 0.78rem;
     }
   }
 
   @media (max-width: 500px) {
+    width: calc(100% - 1rem);
     .post-ribbon {
       width: 100%;
+    }
+    .post-description h1 {
+      font-size: 1.18rem;
+    }
+    .post-date,
+    .post-time {
+      display: block;
+      margin-top: 0.4rem;
+      margin-right: 0;
     }
   }
 }
