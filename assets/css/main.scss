@@ -1003,14 +1003,35 @@ body {
 
   .author__urls-wrapper .author__urls {
     display: block !important;
+    position: static !important;
+    right: auto !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
     max-height: none !important;
     opacity: 1 !important;
     visibility: visible !important;
   }
 
+  .author__urls-wrapper .author__urls::before,
+  .author__urls-wrapper .author__urls::after {
+    display: none !important;
+  }
+
   .sidebar.sticky {
     position: relative;
     top: 0;
+  }
+
+  .sidebar__right,
+  .sidebar__right.sticky {
+    float: none !important;
+    width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    margin: 0 0 0.75rem !important;
   }
 }
 
@@ -1209,6 +1230,27 @@ body {
   .author__urls li a {
     min-height: 32px;
     font-size: 0.92rem;
+  }
+
+  /* On very small phones, keep portrait below cards without overlap */
+  .modern-hero__grid {
+    display: block;
+  }
+
+  .modern-hero__content {
+    padding-bottom: 0.55rem;
+  }
+
+  .modern-hero__visual {
+    grid-area: auto;
+    min-height: clamp(200px, 54vw, 300px);
+    margin-top: 0.35rem;
+    pointer-events: auto;
+  }
+
+  .modern-hero__portrait {
+    width: min(440px, 112%);
+    max-height: min(52vh, 360px);
   }
 }
 
