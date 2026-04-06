@@ -1014,6 +1014,29 @@ body {
   padding-bottom: 0.9rem;
 }
 
+/* Categories page: tighten sidebar card bottom spacing */
+.layout--categories .sidebar .h-card {
+  padding-bottom: 0.35rem;
+}
+
+/* Categories page: left-align sidebar content */
+.layout--categories .sidebar.sticky {
+  text-align: left;
+}
+
+.layout--categories .author__urls li a {
+  justify-content: flex-start;
+}
+
+/* Various projects (single pages): left-align sidebar content */
+.layout--single .sidebar.sticky {
+  text-align: left;
+}
+
+.layout--single .author__urls li a {
+  justify-content: flex-start;
+}
+
 .author__avatar {
   display: flex;
   justify-content: center;
@@ -1047,7 +1070,7 @@ body {
 }
 
 .author__content {
-  min-height: 520px;
+  min-height: auto;
   padding: 1.15rem 0.95rem 1rem;
   text-align: center;
 }
@@ -1444,5 +1467,66 @@ button {
     min-height: 34px;
     padding: 0.36rem 0.74rem;
     font-size: 0.83rem;
+  }
+}
+
+/* Upgrade "Back to top" to a floating CTA */
+.back-to-top {
+  display: none !important;
+}
+
+.floating-back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 120;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: 1px solid rgba(150, 198, 255, 0.45);
+  border-radius: 50%;
+  background:
+    linear-gradient(150deg, rgba(16, 37, 84, 0.96), rgba(13, 30, 68, 0.96)),
+    radial-gradient(circle at 22% 25%, rgba(90, 168, 255, 0.24), transparent 45%);
+  color: #eff6ff;
+  font-size: 0.9rem;
+  box-shadow: 0 14px 30px rgba(4, 10, 26, 0.42);
+  opacity: 0;
+  transform: translateY(12px) scale(0.97);
+  pointer-events: none;
+  transition: opacity 220ms ease, transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+.floating-back-to-top i {
+  font-size: 0.95rem;
+}
+
+.floating-back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.floating-back-to-top:hover {
+  border-color: rgba(128, 201, 255, 0.9);
+  box-shadow: 0 18px 34px rgba(5, 14, 34, 0.48);
+  transform: translateY(-2px);
+}
+
+.floating-back-to-top:focus-visible {
+  outline: 2px solid rgba(105, 194, 255, 0.9);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .floating-back-to-top {
+    right: 0.65rem;
+    bottom: 0.75rem;
+    width: 42px;
+    height: 42px;
+    font-size: 0.82rem;
   }
 }

@@ -1,5 +1,7 @@
 # main links
 main:
+   - title: "Home"
+     url: /
    
    - title: "Full Stack"
      url: /categories/#full-stack-projects

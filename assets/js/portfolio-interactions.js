@@ -51,5 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
     revealElements.forEach((element) => element.classList.add("is-visible"));
   }
 
+  let floatingButton = document.querySelector(".floating-back-to-top");
+  if (!floatingButton) {
+    floatingButton = document.createElement("button");
+    floatingButton.type = "button";
+    floatingButton.className = "floating-back-to-top";
+    floatingButton.setAttribute("aria-label", "Back to top");
+    floatingButton.innerHTML = '<i class="fas fa-arrow-up" aria-hidden="true"></i>';
+    document.body.appendChild(floatingButton);
+  }
+
+  const toggleFloatingButton = () => {
+    const showAfter = Math.max(120, window.innerHeight * 0.25);
+    const shouldShow = window.scrollY > showAfter;
+    floatingButton.classList.toggle("is-visible", shouldShow);
+  };
+
+  toggleFloatingButton();
+  window.addEventListener("scroll", toggleFloatingButton, { passive: true });
+  window.addEventListener("resize", toggleFloatingButton);
+
+  floatingButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   // Keep motion subtle and professional; avoid aggressive mouse-parallax.
 });
