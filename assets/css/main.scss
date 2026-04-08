@@ -746,6 +746,61 @@
   color: #ffffff;
 }
 
+/* Hero CV menu (Download CV options) */
+.modern-hero__actions .cv-menu {
+  position: relative;
+  min-width: 132px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.modern-hero__actions .cv-menu > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.modern-hero__actions .cv-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.modern-hero__actions .cv-menu > summary::-moz-list-bullet {
+  display: none;
+}
+
+.modern-hero__actions .cv-menu__panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  left: 0;
+  min-width: 240px;
+  padding: 0.4rem;
+  border: 1px solid rgba(164, 196, 255, 0.24);
+  border-radius: 0.85rem;
+  background: rgba(12, 27, 63, 0.96);
+  box-shadow: 0 16px 30px rgba(4, 10, 24, 0.38);
+  display: grid;
+  gap: 0.3rem;
+  z-index: 20;
+}
+
+.modern-hero__actions .cv-menu__panel a {
+  display: block;
+  padding: 0.48rem 0.62rem;
+  border-radius: 0.58rem;
+  color: #edf4ff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.modern-hero__actions .cv-menu__panel a:hover {
+  background: rgba(95, 163, 255, 0.2);
+  color: #ffffff;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(16px);
