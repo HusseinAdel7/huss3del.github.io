@@ -52,7 +52,7 @@ function getDirectAnswers(query) {
     answers.push('My email is husseinadelhhh@gmail.com.');
   }
   if (hasLocation) {
-    answers.push('My location is Hellwan - Cairo - Egypt.');
+    answers.push('My location is Cairo, Egypt.');
   }
 
   return answers;

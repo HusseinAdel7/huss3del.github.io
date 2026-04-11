@@ -13,7 +13,7 @@ Name: Hussein Adel
 Phone: +201098018628
 WhatsApp: +201098018628
 Email: husseinadelhhh@gmail.com
-Location: Hellwan - Cairo - Egypt
+Location: Cairo, Egypt
 
 Arabic Keywords:
 الاسم: حسين عادل
@@ -24,10 +24,9 @@ Arabic Keywords:
 Hussein Adel
 
 Full Stack .NET Developer
-Security-Focused Software Engineer
-Malware Analyst
+Site Reliability Engineer (SRE)
 
-Location: Hellwan - Cairo - Egypt
+Location: Cairo, Egypt
 
 Phone / WhatsApp:
 +201098018628

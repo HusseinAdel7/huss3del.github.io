@@ -20,7 +20,7 @@ locale                   : "en-US"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Hussein Adel"
-description              : "Full Stack Developer                     Malware Analyst"
+description              : "Full Stack .NET Developer · Site Reliability Engineer (SRE)"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,8 +104,8 @@ analytics:
 author:
   name             : "Hussein Adel"
   avatar           : /assets/images/site_data/Sinoooo.png # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Full Stack .NET Developer<br>Security-Focused Software Engineer"
-  location         : "Hellwan - Cairo - Egypt"
+  bio              : "Full Stack .NET Developer<br>Site Reliability Engineer (SRE)"
+  location         : "Cairo, Egypt"
   email            :
   links:
     - label: "LinkedIn"
