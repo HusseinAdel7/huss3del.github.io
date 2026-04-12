@@ -1775,8 +1775,9 @@ html.site-nav-scrolled .masthead {
 .page__footer {
   margin-top: 2.5rem;
   padding: 0;
-  border-top: 1px solid rgba(90, 140, 210, 0.1);
-  background: rgba(3, 6, 14, 0.92);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+  background-color: transparent;
   text-align: center;
 }
 
