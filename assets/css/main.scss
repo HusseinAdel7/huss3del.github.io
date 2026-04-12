@@ -150,7 +150,7 @@ html {
 .hero-appbar__nav a {
   padding: 0.32rem 0.62rem;
   border-radius: 999px;
-  color: rgba(222, 234, 255, 0.92);
+  color: rgba(232, 242, 255, 0.97);
   text-decoration: none;
   transition: background-color 240ms ease, color 240ms ease, transform 240ms ease;
 }
@@ -299,7 +299,7 @@ html {
 .modern-hero__lead {
   max-width: 780px;
   margin-bottom: 0.95rem;
-  color: rgba(248, 251, 255, 0.9);
+  color: rgba(252, 253, 255, 0.96);
   font-size: 1.04rem;
   line-height: 1.65;
 }
@@ -384,7 +384,7 @@ html {
 }
 
 .modern-stats small {
-  color: rgba(230, 239, 255, 0.72);
+  color: rgba(236, 244, 255, 0.88);
   font-size: 0.78rem;
 }
 
@@ -419,7 +419,7 @@ html {
 
 .section-title p {
   margin: 0;
-  color: rgba(210, 220, 240, 0.85);
+  color: rgba(220, 230, 248, 0.93);
 }
 
 .section-title--between {
@@ -460,7 +460,7 @@ html {
 .modern-card ul {
   margin: 0.75rem 0 0;
   padding-left: 1.15rem;
-  color: rgba(227, 236, 255, 0.83);
+  color: rgba(234, 242, 255, 0.92);
 }
 
 .modern-card li {
@@ -545,13 +545,13 @@ html {
 
 .experience-step__org {
   margin: 0;
-  color: rgba(210, 220, 240, 0.85);
+  color: rgba(220, 230, 248, 0.93);
   font-weight: 600;
 }
 
 .experience-step__meta {
   margin: 0.3rem 0 0;
-  color: rgba(173, 205, 255, 0.82);
+  color: rgba(192, 218, 255, 0.92);
   font-size: 0.84rem;
   font-weight: 600;
 }
@@ -559,7 +559,7 @@ html {
 .experience-step__list {
   margin: 0.75rem 0 0;
   padding-left: 1.15rem;
-  color: rgba(227, 236, 255, 0.83);
+  color: rgba(234, 242, 255, 0.92);
 }
 
 .experience-step__list li {
@@ -574,7 +574,7 @@ html {
 
 .skill-line {
   margin: 0;
-  color: rgba(227, 236, 255, 0.83);
+  color: rgba(234, 242, 255, 0.92);
   line-height: 1.72;
 }
 
@@ -659,7 +659,7 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.02);
-  color: #dfe8ff;
+  color: #ecf2ff;
   cursor: pointer;
 }
 
@@ -702,7 +702,7 @@ html {
 
 .project-card p {
   margin-bottom: 0.65rem;
-  color: rgba(227, 236, 255, 0.83);
+  color: rgba(234, 242, 255, 0.92);
 }
 
 .project-card__link {
@@ -739,7 +739,7 @@ html {
 
 .modern-cta p {
   margin: 0;
-  color: rgba(224, 236, 255, 0.9);
+  color: rgba(232, 242, 255, 0.97);
   font-size: 1.03rem;
   line-height: 1.7;
 }
@@ -763,6 +763,12 @@ html {
 
 .modern-cta .btn--success {
   box-shadow: 0 10px 24px rgba(75, 168, 54, 0.35);
+}
+
+.modern-cta .btn--success:hover,
+.modern-cta .contact-menu > summary.btn--success:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 12px 28px rgba(75, 168, 54, 0.42);
 }
 
 .modern-cta .btn--inverse {
@@ -1140,6 +1146,7 @@ html {
 body {
   position: relative;
   min-height: 100vh;
+  color: #f0f4fc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1548,7 +1555,7 @@ html.site-nav-scrolled .masthead {
 
 .author__bio {
   margin: 0;
-  color: rgba(221, 233, 255, 0.88);
+  color: rgba(232, 242, 255, 0.95);
 }
 
 .author__bio p {
@@ -1579,7 +1586,7 @@ html.site-nav-scrolled .masthead {
   min-height: 34px;
   padding: 0.26rem 0.42rem;
   border-radius: 0.64rem;
-  color: rgba(233, 242, 255, 0.92);
+  color: rgba(240, 246, 255, 0.97);
   text-decoration: none;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
@@ -1721,11 +1728,20 @@ html.site-nav-scrolled .masthead {
   box-shadow: 0 16px 34px rgba(2, 6, 18, 0.44);
 }
 
+/* Teaser (left image strip): white plate behind cover image so logos / PNGs read on dark UI */
+.post-blog-card .post-ribbon {
+  background-color: #fff !important;
+  background-image: var(--image-url) !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
 .post-blog-card .post-description {
   background:
     linear-gradient(165deg, rgba(10, 22, 54, 0.97), rgba(6, 14, 40, 0.97)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0)) !important;
-  color: rgba(228, 238, 255, 0.92) !important;
+  color: rgba(236, 244, 255, 0.97) !important;
 }
 
 .post-blog-card .post-description h1,
@@ -1734,13 +1750,13 @@ html.site-nav-scrolled .masthead {
 }
 
 .post-blog-card .post-description p {
-  color: rgba(219, 231, 255, 0.84) !important;
+  color: rgba(228, 238, 255, 0.93) !important;
 }
 
 .post-blog-card .post-date,
 .post-blog-card .post-time,
 .post-blog-card .page__meta {
-  color: rgba(191, 209, 245, 0.8) !important;
+  color: rgba(205, 220, 250, 0.92) !important;
 }
 
 .archive__item-title {
@@ -1748,11 +1764,11 @@ html.site-nav-scrolled .masthead {
 }
 
 .archive__item-excerpt {
-  color: rgba(230, 238, 255, 0.85);
+  color: rgba(238, 244, 255, 0.94);
 }
 
 .page__meta {
-  color: rgba(190, 205, 238, 0.72);
+  color: rgba(208, 220, 248, 0.88);
 }
 
 .pagination {
@@ -1797,12 +1813,12 @@ html.site-nav-scrolled .masthead {
   margin: 0;
   font-size: 0.78rem;
   line-height: 1.65;
-  color: rgba(175, 195, 230, 0.72);
+  color: rgba(200, 215, 245, 0.9);
   text-align: center;
 }
 
 .page__footer-simple a {
-  color: rgba(190, 220, 255, 0.9);
+  color: rgba(210, 232, 255, 0.97);
   text-decoration: none;
   border-bottom: 1px solid rgba(90, 168, 255, 0.28);
   transition: color 200ms ease, border-color 200ms ease;
@@ -1849,7 +1865,7 @@ button {
 
 .recent-projects-page__intro {
   margin: 0 0 1rem;
-  color: rgba(214, 228, 255, 0.88);
+  color: rgba(226, 236, 255, 0.95);
   font-size: 1rem;
 }
 
@@ -1857,12 +1873,10 @@ button {
   margin: 1rem auto 1.2rem;
   width: min(1240px, 100% - 2rem);
   padding: 1rem 1rem 1.2rem;
-  border: 1px solid rgba(130, 170, 230, 0.14);
+  border: 0;
   border-radius: 1.15rem;
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.038), rgba(255, 255, 255, 0.01)),
-    radial-gradient(circle at 14% 12%, rgba(70, 130, 220, 0.14), transparent 44%);
-  box-shadow: 0 16px 36px rgba(2, 6, 16, 0.42);
+  background: transparent;
+  box-shadow: none;
 }
 
 .recent-projects-page .recent-projects-card {
@@ -1874,11 +1888,21 @@ button {
 .recent-projects-card__head {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.85rem;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
   margin-bottom: 0.9rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid rgba(170, 198, 255, 0.25);
+}
+
+.recent-projects-card__head .archive__subtitle {
+  flex: 1 1 auto;
+  min-width: min(100%, 12rem);
+}
+
+.recent-projects-card__head .recent-projects-card__view-all {
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .recent-projects-card .archive__subtitle {
@@ -1915,18 +1939,65 @@ button {
   scroll-margin-top: 1rem;
 }
 
+/* Home: Recent posts use same content rail as .modern-section (visual harmony) */
+.layout--home #recent-projects.recent-projects-card {
+  box-sizing: border-box;
+  width: min(1240px, 100% - 2rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.75rem;
+  margin-bottom: 1.85rem;
+  padding: 0;
+}
+
+.recent-projects-card--marquee {
+  /* min tap target for chevron-only nav */
+  --recent-rail: 2.35rem;
+  --recent-rail-gap: 0.6rem;
+  --recent-viewport-pad-x: 0.75rem;
+}
+
+.recent-projects-card--marquee .recent-projects-card__head {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom-color: rgba(170, 198, 255, 0.22);
+}
+
+.recent-projects-card--marquee .recent-projects-card__head .archive__subtitle {
+  font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+  font-weight: 750;
+  letter-spacing: 0.01em;
+  color: #f2f7ff;
+}
+
+.recent-projects-card--marquee .recent-projects-card__view-all {
+  min-height: 40px;
+  padding: 0.48rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 650;
+  border-width: 1.5px;
+}
+
 .recent-projects-card .post-blog-card {
   width: 100%;
-  border-color: rgba(130, 170, 230, 0.14);
-  background: rgba(6, 14, 36, 0.62);
-  box-shadow: 0 8px 24px rgba(2, 5, 14, 0.4);
+  border-color: rgba(150, 190, 255, 0.32) !important;
+  background: rgba(255, 255, 255, 0.065) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 10px 28px rgba(0, 0, 0, 0.22) !important;
+  backdrop-filter: blur(10px);
 }
 
 .recent-projects-card .post-blog-card .post-description {
-  background:
-    linear-gradient(165deg, rgba(10, 22, 54, 0.97), rgba(6, 14, 40, 0.97)),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.022), rgba(255, 255, 255, 0));
-  color: rgba(228, 238, 255, 0.92);
+  background: rgba(255, 255, 255, 0.055) !important;
+  color: rgba(236, 244, 255, 0.97);
+}
+
+.recent-projects-card .post-blog-card:hover {
+  border-color: rgba(170, 210, 255, 0.48) !important;
+  box-shadow:
+    0 0 0 1px rgba(140, 190, 255, 0.2),
+    0 14px 36px rgba(0, 0, 0, 0.28) !important;
 }
 
 .recent-projects-card .post-blog-card .post-description h1,
@@ -1935,17 +2006,382 @@ button {
 }
 
 .recent-projects-card .post-blog-card .post-description p {
-  color: rgba(219, 231, 255, 0.84);
+  color: rgba(228, 238, 255, 0.93);
 }
 
 .recent-projects-card .post-blog-card .post-date,
 .recent-projects-card .post-blog-card .post-time,
 .recent-projects-card .post-blog-card .page__meta {
-  color: rgba(191, 209, 245, 0.8);
+  color: rgba(205, 220, 250, 0.92);
 }
 
 .recent-projects-card .post-blog-card .post-ribbon4 {
   box-shadow: 0 8px 16px rgba(5, 11, 27, 0.38);
+}
+
+/* Home: landscape cards, auto-scroll loop + manual scroll / arrows */
+.recent-marquee {
+  margin: 0;
+}
+
+.recent-marquee__shell {
+  display: flex;
+  align-items: stretch;
+  gap: var(--recent-rail-gap, 0.6rem);
+  padding: 0.45rem 0.4rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(140, 180, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.recent-marquee__nav {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  align-self: center;
+  box-sizing: border-box;
+  min-width: var(--recent-rail, 2.35rem);
+  min-height: var(--recent-rail, 2.35rem);
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0.28rem;
+  border: 0;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: rgba(240, 246, 255, 0.92);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.12rem;
+  line-height: 1;
+  box-shadow: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+
+.recent-marquee__nav:hover:not(:disabled) {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.recent-marquee__nav:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.recent-marquee__nav:focus-visible {
+  outline: 2px solid rgba(130, 190, 255, 0.95);
+  outline-offset: 3px;
+}
+
+.recent-marquee__nav:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+}
+
+.recent-marquee__viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--recent-viewport-pad-x, 0.75rem);
+  border-radius: 0.85rem;
+  padding: 0.65rem var(--recent-viewport-pad-x, 0.75rem) 0.85rem;
+  -webkit-overflow-scrolling: touch;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  scrollbar-color: rgba(160, 210, 255, 0.85) rgba(255, 255, 255, 0.06);
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
+}
+
+.recent-marquee__viewport:focus-visible {
+  outline: 2px solid rgba(130, 190, 255, 0.9);
+  outline-offset: 3px;
+}
+
+.recent-marquee__viewport::-webkit-scrollbar {
+  height: 12px;
+}
+
+.recent-marquee__viewport::-webkit-scrollbar-track {
+  margin: 0.2rem 0.15rem 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.recent-marquee__viewport::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(175, 215, 255, 0.95), rgba(110, 165, 255, 0.75));
+  border-radius: 999px;
+  border: 2px solid rgba(10, 16, 34, 0.75);
+  min-width: 56px;
+}
+
+.recent-marquee__viewport::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(195, 228, 255, 1), rgba(130, 185, 255, 0.9));
+}
+
+.recent-marquee__track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 1.05rem;
+  width: max-content;
+  padding: 0.2rem 0.15rem 0.35rem;
+  min-height: 1px;
+}
+
+.recent-marquee__group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 1.05rem;
+  flex-shrink: 0;
+}
+
+/* Landscape project tiles (wider than tall) */
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card {
+  flex-direction: row;
+  align-items: stretch;
+  width: min(540px, 90vw);
+  min-width: min(300px, 86vw);
+  max-width: 580px;
+  min-height: 0;
+  height: clamp(168px, 28vw, 200px);
+  max-height: 210px;
+  flex-shrink: 0;
+  margin: 0;
+  scroll-snap-align: start;
+  border-radius: 0.85rem;
+  overflow: hidden;
+  transition:
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.32s ease,
+    border-color 0.32s ease;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(160, 205, 255, 0.45);
+  box-shadow:
+    0 22px 48px rgba(2, 8, 24, 0.55),
+    0 0 0 1px rgba(140, 190, 255, 0.28),
+    0 0 28px rgba(80, 140, 240, 0.12);
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-meta {
+  flex: 0 0 40%;
+  max-width: 230px;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  align-self: stretch;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  padding: 0.62rem 0.85rem 0.55rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title title"
+    "excerpt excerpt"
+    "date time";
+  gap: 0;
+  align-items: start;
+  transition: background 0.3s ease;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card:hover .post-description {
+  background: rgba(255, 255, 255, 0.07) !important;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description h1 {
+  grid-area: title;
+  font-size: clamp(0.95rem, 1.35vw, 1.06rem);
+  line-height: 1.32;
+  margin: 0;
+  min-height: calc(2 * 1.32em);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description > p:first-of-type {
+  grid-area: excerpt;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1.42;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: rgba(236, 242, 255, 0.96) !important;
+  opacity: 1;
+  min-height: 0;
+  align-self: stretch;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description .post-date {
+  grid-area: date;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: rgba(228, 236, 255, 0.96) !important;
+  align-self: end;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description .post-time {
+  grid-area: time;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: rgba(228, 236, 255, 0.96) !important;
+  justify-self: end;
+  align-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-ribbon4 {
+  font-size: 0.58rem;
+  padding: 0.26rem 0.48rem 0.26rem 0.38rem;
+  letter-spacing: 0.04em;
+  max-width: calc(100% - 10px);
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.22;
+  text-wrap: balance;
+  word-break: break-word;
+  hyphens: none;
+  top: 10px;
+  border-radius: 0 8px 8px 0;
+}
+
+@media (max-width: 520px) {
+  .recent-projects-card--marquee {
+    --recent-rail: 2.1rem;
+    --recent-rail-gap: 0.35rem;
+    --recent-viewport-pad-x: 0.55rem;
+  }
+
+  .recent-marquee__shell {
+    gap: var(--recent-rail-gap, 0.35rem);
+  }
+
+  .recent-marquee__nav {
+    min-width: var(--recent-rail, 2.1rem);
+    min-height: var(--recent-rail, 2.1rem);
+    padding: 0.22rem;
+    font-size: 1rem;
+  }
+
+  .recent-marquee__viewport {
+    padding: 0.5rem var(--recent-viewport-pad-x, 0.55rem) 0.7rem;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card {
+    height: clamp(152px, 44vw, 178px);
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-meta {
+    flex-basis: 38%;
+    max-width: 42%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .recent-marquee__nav {
+    display: none;
+  }
+
+  .recent-marquee__shell {
+    display: block;
+  }
+
+  .recent-marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .recent-marquee__viewport {
+    overflow-x: visible;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    padding: 0.55rem 0.65rem;
+    box-shadow: none;
+  }
+
+  .recent-marquee__track {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 0.85rem;
+    padding: 0;
+  }
+
+  .recent-marquee__group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card,
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card:hover {
+    width: 100%;
+    max-width: min(980px, calc(100% - 2rem));
+    height: auto;
+    max-height: none;
+    min-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    flex-direction: column;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-meta {
+    flex-basis: auto;
+    width: 100%;
+    max-width: none;
+    height: 180px;
+    min-height: 160px;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description h1 {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
+
+  .recent-projects-card--marquee .recent-marquee__group .post-blog-card .post-description > p:first-of-type {
+    -webkit-line-clamp: unset;
+    display: block;
+  }
 }
 
 @media (max-width: 920px) {

@@ -4,21 +4,53 @@ layout: archive
 
 {{ content }}
 
-<section class="recent-projects-card" id="recent-projects" aria-labelledby="recent-projects-title">
+<section class="recent-projects-card recent-projects-card--marquee" id="recent-projects" aria-labelledby="recent-projects-title">
   <div class="recent-projects-card__head">
     <h3 class="archive__subtitle" id="recent-projects-title">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
     <a class="recent-projects-card__view-all" href="{{ '/categories/' | relative_url }}">View All</a>
   </div>
 
-  {% if paginator %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-  {% for post in posts %}
-    {% include archive-single.html %}
-  {% endfor %}
-
-  {% include paginator.html anchor="#recent-projects" %}
+  <div class="recent-marquee">
+    <div class="recent-marquee__shell">
+      <button
+        type="button"
+        class="recent-marquee__nav recent-marquee__nav--prev"
+        data-recent-marquee-prev
+        aria-controls="recent-marquee-viewport"
+        aria-label="Scroll projects left"
+      >
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div
+        class="recent-marquee__viewport"
+        id="recent-marquee-viewport"
+        role="region"
+        aria-label="{{ site.data.ui-text[site.locale].recent_posts | default: 'Recent posts' }}, horizontal scroll"
+        tabindex="0"
+        data-recent-marquee-scroll
+      >
+        <div class="recent-marquee__track">
+          <div class="recent-marquee__group">
+            {% for post in site.posts %}
+              {% include archive-single.html %}
+            {% endfor %}
+          </div>
+          <div class="recent-marquee__group" aria-hidden="true" inert>
+            {% for post in site.posts %}
+              {% include archive-single.html %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="recent-marquee__nav recent-marquee__nav--next"
+        data-recent-marquee-next
+        aria-controls="recent-marquee-viewport"
+        aria-label="Scroll projects right"
+      >
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
 </section>

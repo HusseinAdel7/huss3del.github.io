@@ -7,6 +7,8 @@ categories:
   - Desktop_Applications
 toc: false
 permalink: /desktop_applications/Edary_License_Generator_ELG/
+header:
+  teaser: /assets/projects/edary-license-generator/images/logo.png
 ---
 
 Internal Windows tool that issues **digitally signed JSON licenses** for **Edary**: you enter customer and machine data; the app outputs a license file verified on the client with the **public key** (the **private key** never ships).

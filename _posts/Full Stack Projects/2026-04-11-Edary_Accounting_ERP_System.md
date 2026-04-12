@@ -7,6 +7,8 @@ categories:
   - Full_Stack_Projects
 toc: true
 permalink: /full_stack_projects/Edary_Accounting_ERP_System/
+header:
+  teaser: /assets/projects/edary/mp.png
 ---
 
 Enterprise **accounting and ERP** for financial management, **chart of accounts**, transactions, and reporting. The codebase follows **layered DDD** with **ABP**, a **SPA** on **Angular 20**, and a **self-contained** Windows host for release deployments.

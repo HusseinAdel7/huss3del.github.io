@@ -25,7 +25,8 @@
 
   <div class="post-meta">
     <div class="post-ribbon">
-      <span class="post-ribbon4">{{ post.categories[0] }}</span>
+      {% assign cat0 = post.categories[0] %}
+      <span class="post-ribbon4"{% if cat0 %} title="{{ cat0 | escape_once }}"{% endif %}>{% if cat0 %}{{ cat0 | replace: '_', ' ' }}{% endif %}</span>
     </div>
   </div>
 

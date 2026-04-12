@@ -2,7 +2,7 @@
 title: FurniStyle (Full Stack (Frontend + ASP .NET Core API)E-Commerce Project)
 classes: wide
 header:
-  teaser: hhttps://github.com/user-attachments/assets/52c4bf6f-2ad2-4e9c-9696-47817f08136a
+  teaser: /assets/projects/images.png
 ribbon: MidnightBlue
 categories:
   - Full_Stack_Projects
