@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion && revealElements.length) {
+    Array.from(revealElements).forEach((el, i) => {
+      el.style.setProperty("--reveal-delay", `${Math.min(i * 42, 360)}ms`);
+    });
+  }
+
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
       (entries) => {
@@ -41,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       },
       {
-        threshold: 0.16,
-        rootMargin: "0px 0px -20px 0px",
+        threshold: 0.12,
+        rootMargin: "0px 0px -12px 0px",
       }
     );
 
@@ -67,12 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
     floatingButton.classList.toggle("is-visible", shouldShow);
   };
 
-  toggleFloatingButton();
-  window.addEventListener("scroll", toggleFloatingButton, { passive: true });
-  window.addEventListener("resize", toggleFloatingButton);
+  const onScroll = () => {
+    toggleFloatingButton();
+    document.documentElement.classList.toggle("site-nav-scrolled", window.scrollY > 18);
+  };
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
 
   floatingButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({ top: 0, behavior: smooth ? "smooth" : "auto" });
   });
 
   // Keep motion subtle and professional; avoid aggressive mouse-parallax.
