@@ -1,7 +1,17 @@
+{% comment %}Local paths must use relative_url so /assets/... works with site.baseurl on GitHub Pages project sites.{% endcomment %}
 {% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+  {% assign _raw_teaser = post.header.teaser %}
+{% elsif site.teaser %}
+  {% assign _raw_teaser = site.teaser %}
 {% else %}
-  {% assign teaser = site.teaser %}
+  {% assign _raw_teaser = "" %}
+{% endif %}
+{% if _raw_teaser == "" %}
+  {% assign teaser = "" %}
+{% elsif _raw_teaser contains "://" %}
+  {% assign teaser = _raw_teaser %}
+{% else %}
+  {% capture teaser %}{{ _raw_teaser | strip | relative_url }}{% endcapture %}
 {% endif %}
 
 {% if post.id %}
@@ -20,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
 
 <a href="{{ post.url | relative_url }}" class="post-blog-card" style="text-decoration: none; 
-    --image-url: url({{ teaser }});
+    --image-url: url(&quot;{{ teaser }}&quot;);
     --ribbon: {{ ribbon }};">
 
   <div class="post-meta">
